@@ -10,11 +10,19 @@ class Solution:
                 for j in range(i+1, len(nums)):
                     # calculate distance
                     dist = abs(nums[j] - nums[i])
-                    distances.append(dist)
+                    if len(distances) < k:
+                        distances.append(dist)
+                        distances.sort()
+                    else:
+                        if dist < distances[k-1]:
+                            distances[k-1] = dist 
+                            distances.sort()
+
+                    
             return distances
         # return the k-th smallest distance:
         d = calc_distances(0, nums)
-        d.sort()
+        # d.sort()
         return d[k-1]
 
 
