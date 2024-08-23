@@ -1,3 +1,5 @@
+import re
+import math
 class Solution:
     def fractionAddition(self, expression: str) -> str:
         nums = list(map(int, re.findall(r'[+-]?\d+', expression)))
@@ -9,7 +11,7 @@ class Solution:
             numerator = numerator * den + num * denominator
             denominator *= den
         
-        common_divisor = gcd(numerator, denominator)
+        common_divisor = math.gcd(numerator, denominator)
         return f"{numerator // common_divisor}/{denominator // common_divisor}"
         
 # Test case 1:
