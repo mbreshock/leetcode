@@ -36,7 +36,7 @@ grid1 = [
 ]
 # Expected: 1
 print(Solution().numIslands(grid1))
-# Output: 
+# Output: 1
 
 grid2 = [
   ["1","1","0","0","0"],
@@ -46,4 +46,4 @@ grid2 = [
 ]
 # Expected: 3
 print(Solution().numIslands(grid2))
-# Output: 
+# Output: 3
